@@ -32,7 +32,8 @@ def like_unlike_post(request):
             else:
                 like.value = 'Like'
         else:
-            like.value = 'Like'    
+            like.value = 'Like' 
+               
             post_obj.save()
             like.save()
     return redirect('posts:main-post-view')
