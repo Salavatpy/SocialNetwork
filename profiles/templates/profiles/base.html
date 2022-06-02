@@ -3,6 +3,8 @@ Logged In is {{ user.username }}
 
 <form action="{% url 'logoutuser' %}" method='POST'>
     {% csrf_token %}
+    <a href='{% url 'profile' %}'> Profile</a>
+    <a href='{% url 'posts:like-post-view' %}'> Posts</a>
 <button type='submit'>Logout</button> 
 </form>
 {% else %}
