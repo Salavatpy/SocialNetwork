@@ -17,6 +17,13 @@ Posts
             </form>
             {% endfor %}
         </div>
+        <div>
+            <form action='' method='POST'>
+                {% csrf_token %}
+                {{ p_form }}
+                <button type='submit'>Post</button>
+            </form>
+        </div>
     </row>
 </div>
 {% endblock %}
